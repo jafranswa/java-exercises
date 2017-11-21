@@ -17,22 +17,24 @@ public class Student {
         this.gpa = 0;
 
     }
-    private String getName(){
+
+    public String getName() {
         return name;
     }
 
-    public String setName (String Fredrick) {
-        name = Fredrick;
-        return name;
+    public void setName(String name) {
+        this.name = name;
     }
+
     //set to private so the counter on studentId never gets altered
     private static int getNextStudentId() {
         return nextStudentId++;
     }
-    //since field is static the data type cannot be changed
+
     public int getStudentId(){
         return studentId;
     }
+
     /** setStudentId is static final so studentId is a constant in the
      * event of a name change the student can still be identified by
      * this int*/
@@ -47,9 +49,8 @@ public class Student {
         return numberOfCredits;
     }
 
-    public void setNumberOfCredits() {
-        numberOfCredits = 12;
-
+    public void setNumberOfCredits(int numberOfCredits) {
+        this.numberOfCredits = numberOfCredits;
     }
 
     public double getGpa () {
@@ -60,6 +61,15 @@ public class Student {
         this.gpa = gpa;
     }
 
+    //TODO - adding methods addGrade and getGradeLevel for 3.6 prep
+    private void addGrade(int courseCredits, double grade) {
+        // Update the appropriate fields: numberOfCredits, gpa
 
+    }
+    private String freshman = "freshman";
+    public String getGradeLevel() {
+
+        return freshman;
+    }
 }
 
